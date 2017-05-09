@@ -1,0 +1,3 @@
+#!/bin/csh
+
+g++ base.cpp codelets.cpp coderack.cpp evolet.cpp system.cpp workspace.cpp checker.cpp memtrack.cpp readall.cpp textshow.cpp -o base

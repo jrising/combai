@@ -1,0 +1,11 @@
+WorkspaceRef is a pointer to where the actual data is stored
+The movement of salience reflects the movement of WorkspaceRefs
+The actual data storage (the WorkspaceElt) stays unless a SeriousMove
+All WorkspaceRef's are pointers to a single WorkspaceRef in memory
+
+ShadowWorkspace:
+  Assume that on server side, the object is also being manipulated with
+  standard methods.
+
+   Need ShadowWorkspaceRef too that checks array of server-local
+   references *'s to return accurate current location.

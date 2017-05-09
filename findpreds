@@ -1,0 +1,10 @@
+#!/bin/csh
+
+while (1)
+  grep "Input" /tmp/output.txt
+  grep "Input" /tmp/output2.txt
+  sleep 1
+  grep "Workspace" /tmp/output.txt
+  grep "Workspace" /tmp/output2.txt
+  sleep 1
+end

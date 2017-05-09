@@ -1,0 +1,30 @@
+TODO:
+  Add RPC-based parallel processing
+    Create "Shadow Workspace" class which just read and write data via rpc
+    Complete command line parameters to say what inputs, outputs, other
+      workspaces are aware of.
+
+
+
+  Find reasonal opportunities to Pull (high activity on bonded elements)
+
+Perhaps Bonds should be taged with something of the system that
+created them.  That way, sameness codelets can travel around in
+sameness loops, while minimally impacting others...
+
+1. Base System: Data goes in, data goes out.
+2. Coderack System: add, remove, run
+
+DONE:
+  Make graphical diagnostic:
+    H-E-L<L-O <letter><-,<,+,K,*,%,#,@ (1,2,3,4,5,6,7,more bonds)>
+    1 2 0 2 4 <number of systems in queue> 
+  Add reading and writing of Workspaces
+    Cycle through all of the memtrack pointers reachable from workspaces
+      writing PNTR...O...B...J...PTR...
+    Read in all PNTR...O...B...J... sections, creating a table of the old
+      PNTR values and the new actual pointers; fill in with old values,
+      then memtrack (which knows where all the pointers are) fixes them.
+    Only problem is references need to be initialized right the first time...
+      Okay-- ensure that no circular references-- it's okay, already impossible
+      Then recurse down to objects without references, and call constructors...

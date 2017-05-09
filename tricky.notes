@@ -1,0 +1,5 @@
+For fread-ing EvolSystem pointers, I want to use GetSystemPP to
+override ref counting system since it's an invalid pointer.  In fact,
+I want to override the ref counting system the entire time, because
+reference counts should pick up from where they left of without any
+interference from readin gand writing.
